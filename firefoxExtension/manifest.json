@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "tableloth",
+    "version": "1.0",
+    "description": "桌布辅助工具.",
+    "icons": {
+        "32": "icons/logo-32.png",
+        "48": "icons/logo-48.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_icon": "icons/logo-48.png",
+        "default_popup": "popup/index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "tableloth.js"
+            ]
+        }
+    ],
+    "applications": {
+        "gecko": {
+          "id": "tablecloth@saigao.fun"
+        }
+      }
+}
