@@ -8,17 +8,7 @@ int main()
 	//获取窗口句柄
 	HWND wallpaperParentHWND = GetWallpaperParentHWND();
 
-	//while (true)
-	//{
-	//	POINT pNow = { 0,0 };
-	//	if (GetCursorPos(&pNow))  // 获取鼠标当前位置
-	//	{
-	//		HWND hwndPointNow = NULL;
-	//		hwndPointNow = WindowFromPoint(pNow);  // 获取鼠标所在窗口的句柄
-	//		std::cout << hwndPointNow << std::endl;
-	//		Sleep(0);
-	//	}
-	//}
+
 	
 	//获取要嵌入窗口的句柄
 	//HWND wallpaperHwnd = FindWindow(_T("WMP Skin Host"), _T("Windows Media Player"));
