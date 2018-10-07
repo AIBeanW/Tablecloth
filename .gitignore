@@ -32,6 +32,9 @@
 *.app
 
 # VSTUDIO
-*/.vs/*
-*/Debug/*
-*/newDesktop/Debug/*
+*/.vs
+*/Debug
+*/newDesktop/Debug
+
+# firefox
+firefox

@@ -1,0 +1,1 @@
+user_pref("lightweightThemes.selectedThemeID", "firefox-compact-dark@mozilla.org");
