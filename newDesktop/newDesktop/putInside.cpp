@@ -3,10 +3,10 @@
 
 BOOL CALLBACK EnumWindowsProc(_In_ HWND   tophandle, _In_ LPARAM topparamhandle) {
 	//如果是桌面图标的窗口;
-	if (FindWindowEx(tophandle, 0, L"SHELLDLL_DefView", nullptr) != nullptr)
+	if (FindWindowEx(tophandle, 0, _T("SHELLDLL_DefView"), nullptr) != nullptr)
 	{
 		//查找tophandle所对应的下一个WorkerW窗口
-		HWND workerw = FindWindowEx(0, tophandle, L"WorkerW", 0);
+		HWND workerw = FindWindowEx(0, tophandle, _T("WorkerW"), 0);
 		//发消息直接关掉可能并不优雅
 		//SendMessage(window_hwnd, 16, 0, 0);
 		//将它保存起来，当然你可以像我一样直接在这里将它隐藏
@@ -48,4 +48,34 @@ RECT caculatePos(HWND wallpaperHwnd)
 
 	RECT pos = { -borderWidth,-borderHeight,fullX + 2 * borderWidth,fullY +  3*borderHeight };
 	return pos;
+}
+
+HWND GetWallpaperHWND() {
+	//找到火狐窗口的
+	HWND firefox = nullptr;
+
+	//EnumFunArg windowInfo;
+	//windowInfo.dwProcessId = processInfo.dwProcessId;
+	//windowInfo.hWnd = nullptr;
+	//while (!windowInfo.hWnd)
+	//{
+		//EnumWindows(EnumWindowsProc, (LPARAM)&windowInfo);
+		//Sleep(0);
+	//}
+
+	//这里应该有个超时检测，以程序未运行时便报告找不到程序，
+	//暂时使用计数菌来计算超时
+	int times=0;
+	while (!firefox)
+	{
+		//找不到就放弃CPU执行时间，等会再找
+		Sleep(0);
+		firefox = FindWindow(_T("MozillaWindowClass"), _T("桌布 - Mozilla Firefox"));
+		times++;
+		if (times>100)
+		{
+			break;
+		}
+	}
+	return firefox;
 }

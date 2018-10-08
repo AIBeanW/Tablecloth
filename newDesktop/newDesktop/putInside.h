@@ -13,6 +13,8 @@ HWND GetWallpaperParentHWND();
 //计算目标POS
 RECT caculatePos(HWND wallpaperHwnd);
 
+HWND GetWallpaperHWND();
+
 //这段代码暂时先留着
 //全局可用与鼠标当前焦点无关
 //while (true)

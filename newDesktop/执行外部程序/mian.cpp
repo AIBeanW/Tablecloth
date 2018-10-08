@@ -50,7 +50,7 @@ HWND GetWallpaperHWND(PROCESS_INFORMATION processInfo) {
 	{
 		//找不到就放弃CPU执行时间，等会再找
 		Sleep(0);
-		firefox = FindWindow(_T("MozillaWindowClass"), _T("Silver·湫澲 - Mozilla Firefox"));
+		firefox = FindWindow(_T("MozillaWindowClass"), _T("桌布 - Mozilla Firefox"));
 	}
 	return firefox;
 }

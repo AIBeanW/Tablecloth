@@ -30,11 +30,19 @@
 *.exe
 *.out
 *.app
+*.iobj
+*.ipdb
+*.pdb
 
 # VSTUDIO
 */.vs
 */Debug
 */newDesktop/Debug
+*/newDesktop/Release
 
 # firefox
 firefox
+
+#忽略firefox的安装包
+!getFirefox/*
+getFirefox/firefox.exe
