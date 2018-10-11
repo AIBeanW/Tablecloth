@@ -12,12 +12,12 @@
 
 > 解压
 
-> 运行firefox下的绿色火狐浏览器，打开你喜欢的网页
+> 运行tablecloth文件夹下的interactioncontroler.exe
 
-> 运行程序newDesktop.exe，完成嵌入
+> 快捷键ctrl+`打开火狐浏览器，打开你喜欢的内容
 
-> 再次运行newDesktop.exe，还原火狐浏览器
+> 快捷键win+`将浏览器嵌入桌面，再次按快捷键win+`还原浏览器
 
-> 关闭火狐浏览器以退出
+> 点击通知栏图标上右键退出
 
 
