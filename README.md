@@ -1,6 +1,4 @@
-# newDesktop
-
-## tablecloth
+# tablecloth
 
 ### 发行清单
 
