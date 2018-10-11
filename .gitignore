@@ -7,6 +7,9 @@
 *.o
 *.obj
 
+# log
+*.log
+
 # Precompiled Headers
 *.gch
 *.pch
@@ -46,3 +49,7 @@ firefox
 #忽略firefox的安装包
 !getFirefox/*
 getFirefox/firefox.exe
+
+# electron
+interactionControler/node_modules
+interactionControler/dist

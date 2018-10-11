@@ -1,0 +1,19 @@
+{
+  "name": "interactioncontroler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.0.3",
+    "electron-builder": "^20.28.4"
+  },
+  "build": {
+    "icon":"src/tray/design.ico"
+  }
+}
