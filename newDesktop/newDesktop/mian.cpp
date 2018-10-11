@@ -9,7 +9,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	_In_ int       nCmdShow)
 {
 	//把参数露出来看一下
-	MessageBox(NULL, lpCmdLine, _T("额外参数"), NULL);
+	//MessageBox(NULL, lpCmdLine, _T("额外参数"), NULL);
 
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
@@ -39,6 +39,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 		{
 			//还原，如果成功返回父窗口句柄
 			resultHwnd = SetParent(wallpaperHwnd, desktophHwnd);
+			//设置位置并显示
+			//计算桌布的位置，根据需求改。暂时这样子。
+			RECT pos = caculatePos(wallpaperHwnd);
+			SetWindowPos(wallpaperHwnd, HWND_TOPMOST, pos.left, pos.top+95, pos.right, pos.bottom, SWP_NOZORDER | SWP_SHOWWINDOW);
 		}
 		return 0;
 	}

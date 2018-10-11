@@ -43,10 +43,10 @@ RECT caculatePos(HWND wallpaperHwnd)
 	int borderHeight = (windowRect.bottom - windowRect.top - clientRect.bottom) / 2;
 	int fullX = GetSystemMetrics(SM_CXFULLSCREEN);
 	//这里桌面高度拿到的值莫名其妙比实际值小，,,ԾㅂԾ,,
-	int fullY = GetSystemMetrics(SM_CYFULLSCREEN);
-	fullY += 23;
+	//int fullY = GetSystemMetrics(SM_CYFULLSCREEN);
+	//fullY +=95;
 
-	RECT pos = { -borderWidth,-borderHeight,fullX + 2 * borderWidth,fullY +  3*borderHeight };
+	RECT pos = { -borderWidth,-borderHeight-95,fullX+2* borderWidth,1080+95};
 	return pos;
 }
 
