@@ -52,3 +52,7 @@ getFirefox/firefox.exe
 # electron
 interactionControler/node_modules
 interactionControler/dist
+
+# got_firefox
+got_firefox/node_modules
+got_firefox/firefox.exe

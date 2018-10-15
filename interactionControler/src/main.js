@@ -26,15 +26,15 @@ app.on('ready', () => {
 
     //系统托盘右键菜单 
     var trayMenuTemplate = [{
-        label: '设置',
-        click: function () { }
-    }, {
         label: '帮助',
-        click: function () { }
-    },
-    {
-        label: '关于',
-        click: function () { }
+        click: function () {
+            dialog.showMessageBox({
+                type: 'info',
+                message: '帮助!',
+                detail: 'Ctrl+`打开火狐浏览器\nWin+`嵌入或还原火狐浏览器',
+                buttons: []
+            })
+        }
     },
     {
         label: '退出',
@@ -58,31 +58,16 @@ app.on('ready', () => {
     //注册全局快捷键
     //win+`键
     globalShortcut.register('super+`', () => {
-        // dialog.showMessageBox({
-        //   type: 'info',
-        //   message: 'Success!',
-        //   detail: 'You pressed the registered global shortcut keybinding.',
-        //   buttons: []
-        // })
-        // 
         // shell.openExternal('https://github.com')
-
         // 给里面放上嵌入的处理程序
         shell.openItem(firefoxInside)
     })
 
     globalShortcut.register('ctrl+`', () => {
-        // dialog.showMessageBox({
-        //   type: 'info',
-        //   message: 'Success!',
-        //   detail: 'You pressed the registered global shortcut keybinding.',
-        //   buttons: []
-        // })
-        // 
-        // shell.openExternal('https://github.com')
 
         // 给里面放上嵌入的处理程序
-        shell.openItem(firefox)
+        console.log(shell.openItem(firefox));
+        
     })
 
     // 推出前注销全局快捷键
