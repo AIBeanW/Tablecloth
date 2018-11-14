@@ -4,6 +4,8 @@
 
 https://github.com/SilverLeaves/Tablecloth/releases
 
+国内加速下载地址http://dev.saigao.fun/tablecloth/release/tablecloth-windows-x86-0.2.zip
+
 ### 发行清单
 
 > **tablecloth**
