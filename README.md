@@ -1,5 +1,9 @@
 # tablecloth
 
+## 下载地址
+
+https://github.com/SilverLeaves/Tablecloth/releases
+
 ### 发行清单
 
 > **tablecloth**
